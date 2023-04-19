@@ -24,6 +24,7 @@ pipeline {
                      "fmuk66e_bl",
                      "fmuk66v3_bl",
                      "kakutef7_bl",
+                     "blitzf7_bl",
                      "mindpxv2_bl",
                      "modalai_fc_v1_bl",
                      "modalai_voxl2_io_bl",

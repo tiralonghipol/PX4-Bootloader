@@ -68,6 +68,7 @@ TARGETS	= \
 	fmuk66e_bl \
 	fmuk66v3_bl \
 	kakutef7_bl \
+	blitzf7_bl \
 	mindpxv2_bl \
 	modalai_fc_v1_bl \
 	modalai_voxl2_io_bl \
@@ -115,6 +116,9 @@ auavx2v1_bl: $(MAKEFILE_LIST) $(LIBOPENCM3)
 
 kakutef7_bl: $(MAKEFILE_LIST) $(LIBOPENCM3)
 	${MAKE} ${MKFLAGS} -f  Makefile.f7 TARGET_HW=KAKUTEF7 LINKER_FILE=stm32f7.ld TARGET_FILE_NAME=$@
+
+blitzf7_bl: $(MAKEFILE_LIST) $(LIBOPENCM3)
+	${MAKE} ${MKFLAGS} -f  Makefile.f7 TARGET_HW=BLITZF7 LINKER_FILE=stm32f7.ld TARGET_FILE_NAME=$@
 
 pix32v5_bl:$(MAKEFILE_LIST) $(LIBOPENCM3)
 	${MAKE} ${MKFLAGS} -f  Makefile.f7 TARGET_HW=HOLYBRO_PIX32_V5 LINKER_FILE=stm32f7.ld TARGET_FILE_NAME=$@

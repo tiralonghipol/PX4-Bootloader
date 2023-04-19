@@ -855,6 +855,53 @@
 # define SERIAL_BREAK_DETECT_DISABLED   1
 
 /****************************************************************************
+ * TARGET_HW_BLITZF7
+ ****************************************************************************/
+
+#elif  defined(TARGET_HW_BLITZF7)
+
+# define APP_LOAD_ADDRESS               0x08018000
+# define BOOTLOADER_DELAY               5000
+# define INTERFACE_USB                  1
+# define INTERFACE_USART                1
+# define USBDEVICESTRING                "Blitz F7"
+# define USBPRODUCTID                   0x0016
+# define BOOT_DELAY_ADDRESS             0x00000200
+
+# define BOARD_TYPE                     456
+# define BOARD_FLASH_SECTORS            7
+# define BOARD_FLASH_SIZE               (1024 * 1024)
+# define BOARD_FIRST_FLASH_SECTOR_TO_ERASE    2
+# define APP_RESERVATION_SIZE            (2 * 32 * 1024) /* 2 32 Kib Sectors */
+
+# define OSC_FREQ                       8
+
+# define BOARD_PIN_LED_ACTIVITY         1
+# define BOARD_PIN_LED_BOOTLOADER       GPIO2 // BLUE
+# define BOARD_PORT_LEDS                GPIOA
+# define BOARD_CLOCK_LEDS               RCC_AHB1ENR_GPIOAEN
+# define BOARD_LED_ON                   gpio_clear
+# define BOARD_LED_OFF                  gpio_set
+
+# define USBMFGSTRING                   "iFlight"
+
+// VBUS sense is connected to PA8 instead of PA9
+# define BOARD_USB_VBUS_SENSE_DISABLED
+# define BOARD_PORT_VBUS                GPIOA
+# define BOARD_PIN_VBUS                 GPIO8
+
+# define BOARD_USART                    USART3 // labeled as UART3
+# define BOARD_USART_CLOCK_REGISTER     RCC_APB1ENR
+# define BOARD_USART_CLOCK_BIT          RCC_APB1ENR_USART3EN
+# define BOARD_PORT_USART               GPIOB
+# define BOARD_PORT_USART_AF            GPIO_AF7
+# define BOARD_PIN_TX                   GPIO10
+# define BOARD_PIN_RX                   GPIO11
+# define BOARD_USART_PIN_CLOCK_REGISTER RCC_AHB1ENR
+# define BOARD_USART_PIN_CLOCK_BIT      RCC_AHB1ENR_GPIOBEN
+# define SERIAL_BREAK_DETECT_DISABLED   1
+
+/****************************************************************************
  * TARGET_HW_AUAV_X2V1
  ****************************************************************************/
 
